@@ -1,0 +1,5 @@
+#file named .gitignore
+.DS_Store
+*.swp
+.VimballRecord
+.netrwhist
