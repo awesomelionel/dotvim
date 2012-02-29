@@ -16,3 +16,6 @@
 [submodule "bundle/gundo"]
 	path = bundle/gundo
 	url = https://github.com/vim-scripts/Gundo.git
+[submodule "colors"]
+	path = colors
+	url = https://github.com/tpope/vim-vividchalk.git

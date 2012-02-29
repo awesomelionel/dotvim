@@ -1,78 +1,55 @@
-" Use Vim settings, rather than Vi settings (much better!).
-" This must be first, because it changes other options as a side effect.
-
-" -----PATHOGEN MOD--------
-"  ------------------- "
+" Vimrc file for Awesomelionel. Modify/Steal as you please.
+"-----PATHOGEN MOD----"
+"Must always load pathogen first"
 call pathogen#infect()
 
-set nocompatible
+set nocompatible 				" Don't care about vi
+syntax on 						" Switch on syntax highlighting
+filetype off                	" Set filetype stuff to on
+filetype plugin indent on
 
-" Set filetype stuff to on
-filetype off
-filetype plugin on
-filetype indent on
+"Settings
+let mapleader = ","
+let maplocalleader = "\\"
 
-"Set Line numbering
-set number
+" Presentation Settings
+set number						" Set Line numbering
+set tabstop=4					" Tabstops are 4 spaces
+set shiftwidth=4				" Number of spaces for indent	
+set nowrap						" Do not wrap words (view) 
+set textwidth=0 				" Do not wrap word (insert)
+set showcmd						" Show the current command in the lower right corner
+set showmode					" Show the current mode
+set showmatch 					" Show matching brackets.
+set ruler						" Line and column number of the cursor positions
+set visualbell					" use visual bell instead of beeps
+set wildmenu					" Make the command-line completion better
+set scrolloff=8 				" Keep the cursor 8 lines from the bottom when scolling
+set linespace=3					" Larger Line Height
+set go-=T						" Hides MacVim toolbar
 
-" Tabstops are 4 spaces
-set tabstop=4
-set shiftwidth=4
-
-" set the search scan to wrap lines
-set wrapscan
-"This means whenever Vim loses focus, it saves the files in the buffer
-"au FocusLost * :wa
-
-" set the search scan so that it ignores case when the search is all lower
-" case but recognizes uppercase if it's specified
-set ignorecase
-set smartcase
-
-" Show the current command in the lower right corner
-set showcmd
-
-" Show the current mode
-set showmode
-
-" Switch on syntax highlighting.
-syntax on
-
-" When the page starts to scroll, keep the cursor 8 lines from the top and 8
-" lines from the bottom
-set scrolloff=8
-
-" Enable search highlighting
-set hlsearch
-
-" Incrementally match the search
-set incsearch
-
-" Keep some stuff in the history
-set history=100
-
-" Make the command-line completion better
-set wildmenu
-
-"Stop Vim making back up files
-set nobackup
+" Behaviours
+"au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
+set history=100					" Keep some stuff in the history
+set nobackup					" Stop Vim making back up files
 set noswapfile
 
+" Search Settings
+set incsearch					" Incrementally match the search
+set hlsearch					" Enable search highlighting
+set ignorecase					" set the search scan so that it ignores case when the search is all lower
+set smartcase					" case but recognizes uppercase if it's specified
+
+" KeyBindings
 "Clear search when you press ,/
-nmap <silent> ,/ :nohlsearch<CR>
+nmap <leader>/ :nohlsearch<CR>
 
 "Change window key remap
-nmap <silent> ,w <C-w>w 
-
-"Larger Line Height
-set linespace=3
-
-"Hides MacVim toolbar
-set go-=T
+nmap <leader>w <C-w>w 
 
 " Edit the vimrc file
-nmap <silent> ,ev :e $MYVIMRC<CR>
-nmap <silent> ,sv :so $MYVIMRC<CR>
+nmap <leader>ev :e $MYVIMRC<CR>
+nmap <leader>sv :so $MYVIMRC<CR>
 
 if has("gui_running")
 	set guifont=Monaco:h12
