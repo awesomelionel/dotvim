@@ -13,3 +13,6 @@
 [submodule "bundle/sparkup"]
 	path = bundle/sparkup
 	url = https://github.com/kogakure/vim-sparkup.git
+[submodule "bundle/gundo"]
+	path = bundle/gundo
+	url = https://github.com/vim-scripts/Gundo.git
