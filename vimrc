@@ -1,4 +1,4 @@
-" Vimrc file for Awesomelionel. Modify/Steal as you please.
+ "Vimrc file for Awesomelionel. Modify/Steal as you please.
 "-----PATHOGEN MOD----"
 "Must always load pathogen first"
 call pathogen#infect()
@@ -51,6 +51,24 @@ nmap <leader>w <C-w>w
 nmap <leader>ev :e $MYVIMRC<CR>
 nmap <leader>sv :so $MYVIMRC<CR>
 
+" Sparkup
+let g:sparkup=' '
+let g:sparkupExecuteMapping='<D-e>'
+
+" NerdTree
+nmap ,nt :NERDTreeToggle
+"let NERDTreeShowHidden=1
+autocmd VimEnter * NERDTree
+autocmd VimEnter * wincmd p
+
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
+" Nerdcommenter
+nmap <leader>, :call NERDComment(0, "invert")<CR>
+vmap <leader>, :call NERDComment(0, "invert")<CR>
+
+" GUI and Colorscheme
 if has("gui_running")
 	set guifont=Monaco:h12
 	colorscheme desert
@@ -66,23 +84,4 @@ if has("gui_running")
 endif
 :nohls
 
-"--------------------------
-"------SPARKUP MOD---------
-"--------------------------
-let g:sparkup=' '
-let g:sparkupExecuteMapping='<D-e>'
 
-"--------------------------
-"------NERD TREE-----------
-"-------------------------
-nmap ,nt :NERDTreeToggle
-
-"let NERDTreeShowHidden=1
-
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
-
-"--------------------------
-"-----GUNDO----------------
-"--------------------------
-nnoremap <F5> :GundoToggle<CR>
