@@ -46,6 +46,10 @@ nmap <leader>/ :nohlsearch<CR>
 
 "Change window key remap
 nmap <leader>w <C-w>w 
+noremap <silent> <C-Down> <C-W>j
+noremap <silent> <C-Up> <C-W>k
+noremap <silent> <C-Left> <C-W>h
+noremap <silent> <C-Right> <C-W>l
 
 " Edit the vimrc file
 nmap <leader>ev :e $MYVIMRC<CR>
