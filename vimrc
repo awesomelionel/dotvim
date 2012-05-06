@@ -75,7 +75,8 @@ vmap <leader>, :call NERDComment(0, "invert")<CR>
 " GUI and Colorscheme
 if has("gui_running")
 	set guifont=Monaco:h12
-	colorscheme desert
+	colorscheme solarized
+	set background=dark
 	if !exists("g:vimrcloaded")
 		winpos 0 0
 		if ! &diff
