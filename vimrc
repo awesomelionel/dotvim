@@ -60,10 +60,10 @@ let g:sparkup=' '
 let g:sparkupExecuteMapping='<D-e>'
 
 " NerdTree
-nmap ,nt :NERDTreeToggle
+nmap ,nt :NERDTreeToggle<CR>
 "let NERDTreeShowHidden=1
-autocmd VimEnter * NERDTree
-autocmd VimEnter * wincmd p
+"autocmd VimEnter * NERDTree
+"autocmd VimEnter * wincmd p
 
 " Gundo
 nnoremap <F5> :GundoToggle<CR>
@@ -71,6 +71,11 @@ nnoremap <F5> :GundoToggle<CR>
 " Nerdcommenter
 nmap <leader>, :call NERDComment(0, "invert")<CR>
 vmap <leader>, :call NERDComment(0, "invert")<CR>
+
+" Auto set filetype for PHP.HTML
+au BufRead *.php set ft=php.html
+au BufNewFile *.php set ft=php.html
+
 
 " GUI and Colorscheme
 if has("gui_running")
