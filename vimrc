@@ -1,7 +1,8 @@
  "Vimrc file for Awesomelionel. Modify/Steal as you please.
 "-----PATHOGEN MOD----"
 "Must always load pathogen first"
-call pathogen#infect()
+call pathogen#runtime_append_all_bundles()
+call pathogen#helptags()
 
 set nocompatible 				" Don't care about vi
 syntax on 						" Switch on syntax highlighting

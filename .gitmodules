@@ -28,3 +28,6 @@
 [submodule "bundle/solarized"]
 	path = bundle/solarized
 	url = https://github.com/altercation/vim-colors-solarized.git
+[submodule "bundle/yii-api"]
+	path = bundle/yii-api
+	url = https://github.com/mikehaertl/yii-api-vim.git
