@@ -1,4 +1,4 @@
- "Vimrc file for Awesomelionel. Modify/Steal as you please.
+ "
 "-----PATHOGEN MOD----"
 "Must always load pathogen first"
 call pathogen#runtime_append_all_bundles()
@@ -81,17 +81,20 @@ au BufNewFile *.php set ft=php.html
 " GUI and Colorscheme
 if has("gui_running")
 	set guifont=Monaco:h12
-	colorscheme solarized
-	set background=dark
-	if !exists("g:vimrcloaded")
-		winpos 0 0
-		if ! &diff
-			winsize 130 90
-		else
-			winsize 227 90
-		endif
-		let g:vimrcloaded = 1
-	endif
+	colorscheme desert
+	winpos 0 0
+	winsize 180 40
+
+	"background=light
+	"if !exists("g:vimrcloaded")
+		"winpos 0 0
+		"if ! &diff
+			"winsize 130 90
+		"else
+			"winsize 400 90
+		"endif
+		"let g:vimrcloaded = 1
+	"endif
 endif
 :nohls
 

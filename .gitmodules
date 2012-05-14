@@ -31,3 +31,6 @@
 [submodule "bundle/yii-api"]
 	path = bundle/yii-api
 	url = https://github.com/mikehaertl/yii-api-vim.git
+[submodule "bundle/syntastic"]
+	path = bundle/syntastic
+	url = https://github.com/scrooloose/syntastic.git
