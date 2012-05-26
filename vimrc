@@ -1,4 +1,3 @@
- "
 "-----PATHOGEN MOD----"
 "Must always load pathogen first"
 call pathogen#runtime_append_all_bundles()
@@ -28,6 +27,7 @@ set wildmenu					" Make the command-line completion better
 set scrolloff=8 				" Keep the cursor 8 lines from the bottom when scolling
 set linespace=3					" Larger Line Height
 set go-=T						" Hides MacVim toolbar
+set hidden 						" Set Hidden for LustyExplorer
 
 " Behaviours
 "au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
@@ -78,6 +78,9 @@ au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 
 
+" LustyJuggler suppress warning
+let g:LustyJugglerSuppressRubyWarning=1
+
 " GUI and Colorscheme
 if has("gui_running")
 	set guifont=Monaco:h12
@@ -95,6 +98,7 @@ if has("gui_running")
 		"endif
 		"let g:vimrcloaded = 1
 	"endif
+	
 endif
 :nohls
 
