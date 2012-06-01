@@ -77,6 +77,9 @@ vmap <leader>, :call NERDComment(0, "invert")<CR>
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
 
+" Surround : Plugin keybinding
+let g:surround_37 = "<% \r %>" " press % 
+let g:surround_61 = "<%= \r %>" " press = 
 
 " LustyJuggler suppress warning
 let g:LustyJugglerSuppressRubyWarning=1
