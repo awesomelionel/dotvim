@@ -47,10 +47,10 @@ nmap <leader>/ :nohlsearch<CR>
 
 "Change window key remap
 nmap <leader>w <C-w>w 
-noremap <silent> <C-Down> <C-W>j
-noremap <silent> <C-Up> <C-W>k
-noremap <silent> <C-Left> <C-W>h
-noremap <silent> <C-Right> <C-W>l
+noremap <silent> <C-j> <C-W>j
+noremap <silent> <C-k> <C-W>k
+noremap <silent> <C-h> <C-W>h
+noremap <silent> <C-l> <C-W>l
 
 " Edit the vimrc file
 nmap <leader>ev :e $MYVIMRC<CR>
@@ -80,6 +80,7 @@ au BufNewFile *.php set ft=php.html
 " Surround : Plugin keybinding
 let g:surround_37 = "<% \r %>" " press % 
 let g:surround_61 = "<%= \r %>" " press = 
+autocmd FileType php let b:surround_45 = "<?php \r ?>"
 
 " LustyJuggler suppress warning
 let g:LustyJugglerSuppressRubyWarning=1
@@ -101,8 +102,15 @@ if has("gui_running")
 		"endif
 		"let g:vimrcloaded = 1
 	"endif
-	
+else	
+	colorscheme solarized
+	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
 endif
+
 :nohls
+
+" use aesthetic middle of screen for "zz"
+nnoremap <silent> zz :exec "normal! zz" . float2nr(winheight(0)*0.1) . "\<Lt>C-E>"<CR>
 
 
