@@ -34,7 +34,7 @@ set hidden 						" Set Hidden for LustyExplorer
 set history=100					" Keep some stuff in the history
 set nobackup					" Stop Vim making back up files
 set noswapfile
-
+"set clipboard=unnamed			" Anything copied will be in the clipboard
 " Search Settings
 set incsearch					" Incrementally match the search
 set hlsearch					" Enable search highlighting
