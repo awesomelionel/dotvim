@@ -28,13 +28,13 @@ set scrolloff=8 				" Keep the cursor 8 lines from the bottom when scolling
 set linespace=3					" Larger Line Height
 set go-=T						" Hides MacVim toolbar
 set hidden 						" Set Hidden for LustyExplorer
-
+set backspace=indent,eol,start
 " Behaviours
 "au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
 set history=100					" Keep some stuff in the history
 set nobackup					" Stop Vim making back up files
 set noswapfile
-"set clipboard=unnamed			" Anything copied will be in the clipboard
+set clipboard=unnamed			" Anything copied will be in the clipboard
 " Search Settings
 set incsearch					" Incrementally match the search
 set hlsearch					" Enable search highlighting
@@ -81,7 +81,7 @@ au BufNewFile *.php set ft=php.html
 " Surround : Plugin keybinding
 let g:surround_37 = "<% \r %>" " press % 
 let g:surround_61 = "<%= \r %>" " press = 
-autocmd FileType php let b:surround_45 = "<?php \r ?>"
+autocmd FileType php let b:surround_45 = "<?php \r ?>" "press - 
 
 " LustyJuggler suppress warning
 let g:LustyJugglerSuppressRubyWarning=1
@@ -107,6 +107,13 @@ else
 	colorscheme solarized
 	let &t_SI = "\<Esc>]50;CursorShape=1\x7"
 	let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+	if exists('$TMUX')
+		let &t_SI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=1\x7\<Esc>\\"
+		let &t_EI = "\<Esc>Ptmux;\<Esc>\<Esc>]50;CursorShape=0\x7\<Esc>\\"
+	else
+		let &t_SI = "\<Esc>]50;CursorShape=1\x7"
+		let &t_EI = "\<Esc>]50;CursorShape=0\x7"
+	endif
 endif
 
 :nohls
