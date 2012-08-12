@@ -91,7 +91,7 @@ if has("gui_running")
 	set guifont=Monaco:h12
 	colorscheme desert
 	winpos 0 0
-	winsize 180 40
+	winsize 190 45
 
 	"background=light
 	"if !exists("g:vimrcloaded")
