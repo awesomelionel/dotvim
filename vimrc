@@ -29,6 +29,7 @@ set linespace=3					" Larger Line Height
 set go-=T						" Hides MacVim toolbar
 set hidden 						" Set Hidden for LustyExplorer
 set backspace=indent,eol,start
+set clipboard=unnamed
 " Behaviours
 "au FocusLost * :wa				" This means whenever Vim loses focus, it saves the files in the buffer
 set history=100					" Keep some stuff in the history
@@ -77,7 +78,7 @@ vmap <leader>, :call NERDComment(0, "invert")<CR>
 " Auto set filetype for PHP.HTML
 au BufRead *.php set ft=php.html
 au BufNewFile *.php set ft=php.html
-
+autocmd BufNewFile,BufRead *.json set ft=javascript 
 " Surround : Plugin keybinding
 let g:surround_37 = "<% \r %>" " press % 
 let g:surround_61 = "<%= \r %>" " press = 
