@@ -82,10 +82,13 @@ autocmd BufNewFile,BufRead *.json set ft=javascript
 " Surround : Plugin keybinding
 let g:surround_37 = "<% \r %>" " press % 
 let g:surround_61 = "<%= \r %>" " press = 
-autocmd FileType php let b:surround_45 = "<?php \r ?>" "press - 
+autocmd FileType php.html let b:surround_45 = "<?php \r ?>" "press - 
 
 " LustyJuggler suppress warning
 let g:LustyJugglerSuppressRubyWarning=1
+
+" CoffeeScript Plugin
+au BufWritePost *.coffee silent CoffeeMake!
 
 " GUI and Colorscheme
 if has("gui_running")
